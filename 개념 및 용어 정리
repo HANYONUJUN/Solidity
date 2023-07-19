@@ -1,0 +1,62 @@
+# Solidity 개념 및 용어 정리
+
+solidity - 계약 지향 프로그래밍 언어로 이더리움과 가은 블록체인 플랫폼의 스마트 컨트랙트를 통한 Dapp개발 및 구현에 사용
+
+가장 기본적으로 아래와 같은 방식으로 구현
+
+*// 솔리디티 버전 0.6.0*
+
+pragma solidity ^0.6.0;
+
+*// 컨트랙트 - 모든 코드 실행은 컨트랙트 내에서 실행됨*
+
+contract Counter{
+
+*// count 변수선언*
+
+**uint**
+
+count;
+
+*// 생성자 생성*
+
+constructor() public{
+        count = 0;
+    }
+
+*// 함수선언 #1*
+
+function getCount() public view returns(
+
+**uint**
+
+){
+
+**return**
+
+count;
+    }
+
+*// 함수선언 #2*
+
+function incrementCount() public{
+        count = count + 1;
+    }
+}
+
+Tool
+기본적으로 ‘Remix IDE’ 사용
+
+
+**자료형**
+
+Boolean
+- True/False
+
+**정수형**
+1. uint(unsigned int)- 양수만 저장, int보다 더 많이 저장가능
+2. int - 양수 음수 저장 가능
+
+**문자형**
+1. bytes - 동적 크기 바이트 배열
+2. String - 동적 크기 인코딩된(UTF-8) 문자열
